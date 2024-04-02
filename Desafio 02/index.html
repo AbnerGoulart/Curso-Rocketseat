@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>  
+    <div id="app">
+        <div id="top">
+            <div id="user-info">
+                <img src="https://randomuser.me/api/portraits/women/19.jpg" alt="mulher sorrindo" />            
+                <div id="user-status">
+                    <strong>Joana Souza</strong>
+                    <div class="status">Online</div>
+                </div>
+            </div>
+            <div id="close-chat">
+                <i class="ph ph-x"></i>
+            </div>
+            
+        </div>
+        <div id="messages">
+            <div id="last-seen">Hoje 11h30m</div>
+            <div class="messages">
+                <div class="return">
+                    <div class="top">Joana - 11:30</div>
+                    <div class="body">Amiga, fiquei sabendo que o Alisson deu uma dica TOP para o Ricardo e o Abner</div>
+                </div>
+                <div class="send">
+                    <div class="top">Eu - 11:31</div>
+                    <div class="body">Capaz Joana, que dica?🤔 Me conta!</div>
+                </div>
+                <div class="return">
+                    <div class="top">Joana - 11:33</div>
+                    <div class="body">Então Menina, parece que é um curso de programação</div>
+                </div>
+                <div class="send">
+                    <div class="top">Eu - 11:38</div>
+                    <div class="body">Ahhh, agora eles vão conseguir dominar o mundo!!😂😂😂😂</div>
+                </div>
+                <div class="return">
+                    <div class="top">Joana - 11:39</div>
+                    <div class="body">Com certeza! É um super curso da RocketSeat!</div>
+                </div>
+                <div class="send">
+                    <div class="top">Eu - 11:40</div>
+                    <div class="body">RocketSeat, uau! Onde posso me inscrever?</div>
+                </div>
+                <div class="return">
+                    <div class="top">Joana - 11:39</div>
+                    <div class="body">Só clicar no link <a href="https://www.rocketseat.com.br/formacao/fullstack?utm_source=google&utm_medium=cpc&utm_campaign=lead&utm_term=perpetuo&utm_content=institucional-lead-home-texto-lead-brandkws-none-none-institucional-none-none-br-google">rocketseat.com.br</a> e se inscrever</div>
+                </div>
+                <div class="send">
+                    <div class="top">Eu - 11:40</div>
+                    <div class="body">Quer saber, vou me inscrever tb!</div>
+                </div>
+                <div class="return">
+                    <div class="top">Joana - 11:40</div>
+                    <div class="body">Não vou perder tempo tb! Como você diz: VAMOS DOMINAR O MUNDO!!🚀🌎</div>
+                </div>
+            </div>
+        </div>
+        <form id="bottom">
+            <input type="text" placeholder="Mensagem">
+            <button>
+                <i class="ph ph-paper-plane-tilt"></i>
+            </button>
+        </form>
+    </div>
+</body>
+</html>
