@@ -12,8 +12,9 @@ body::before {
   width: 100vw;
   height: 436px;
   background: #535971;
+  top: 0;
 
-  position: fixed;
+  position: absolute;
   z-index: -1;
 }
 
@@ -32,6 +33,11 @@ h1 {
   margin-bottom: 18px;
 }
 
+p {
+  margin-bottom: 58px;
+  width: 417px;
+}
+
 form {
   margin-top: 58px;
   background: #fff;
@@ -45,6 +51,11 @@ form {
 
 fieldset {
   border: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  color: #4E4958;
 }
 
 fieldset legend {
@@ -55,6 +66,56 @@ fieldset legend {
   color: #535971;
   border-bottom: 1px solid #E6E6F0;
   width: 100%;
-  padding: 16px;
-  
+  padding-bottom: 16px;
+}
+
+fieldset legend {
+  font-family: 'Staatliches', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 34px;
+  margin-top: 64px;
+  color: #535971;
+  border-bottom: 1px solid #E6E6F0;
+  width: 100%;
+  padding-bottom: 16px;
+}
+
+legend::placeholder {
+  font-size: 12px;
+  color: #C1BCCC;
+}
+
+.input-wrapper label span {
+  font-size: 12px;
+  color: #C1BCCC;
+  margin-left: 9px;
+}
+
+
+legend.subtitle {
+  font-family: 'Staatliches', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 34px;
+  color: #535971;
+  border-bottom: none;
+  width: 100%;
+  margin-top: 16px;
+}
+
+.input-wrapper {
+  margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.input-wrapper label {
+  margin-right: 10px;
+}
+
+.input-wrapper input {
+  flex: 1;
 }
