@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: "Mulish", sans-serif;
+    font-size: 1.6rem;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    background-color: #fff;
+}
+
+main p::first-letter {
+    font-size: 4em; /* Tamanho da letra aumentada */
+    float: left; /* Alinha a letra à esquerda */
+    margin-right: 0.1em; /* Espaçamento entre a letra e o texto */
+    font-weight: bold; /* Opcional: torna a letra em negrito */
+    font-family: Arial, sans-serif; /* Opcional: especifica a família de fontes */
+    color: #333; /* Opcional: especifica a cor da letra */
+}
+
+header {
+    background-color: #000; /* Cor de fundo preta */
+    width: 100%; /* Largura de 100% */
+    height: 7.2rem; /* Altura de 72rem */
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    width: 54px; /* Largura da imagem de 40 pixels */
+    height: auto; /* Altura automática para manter a proporção */
+    margin-right: 20px; /* Espaçamento à direita para separar a logo do formulário */
+    margin-left: 20px; /* Espaçamento à esquerda para centralizar a logo */
+}
+
+header form {
+    margin-right: auto; /* Margem à direita para mover o formulário para o final do header */
+}
+
+header ul {
+    list-style: none; /* Remover marcadores de lista */
+    display: flex; /* Alinhar os itens do menu em linha */
+}
+
+header li {
+    margin-right: 20px; /* Espaçamento entre os itens do menu */
+    color: white;
+}
