@@ -18,17 +18,18 @@
     <form action="">
         <fieldset>
             <div class="fieldset-wrapper">
-                <fieldset>
-                    <legend>
+                <legend>
                         Informações pessoais
                     </legend>
-                    <div class="input-wrapper">
-                        <label for="first-name">Nome</label>
-                        <input type="text" id="first-name"/>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="last-name">Sobrenome</label>
-                        <input type="text" id="last-name"/>
+                    <div class="col-2">
+                        <div class="input-wrapper">
+                            <label for="first-name">Nome</label>
+                            <input type="text" id="first-name"/>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="last-name">Sobrenome</label>
+                            <input type="text" id="last-name"/>
+                        </div>
                     </div>
                     <div class="input-wrapper">
                         <label for="email">Email <span>(Digite um email válido)</span></label>
@@ -38,19 +39,27 @@
                         <label for="password">Senha <span>(Mínimo de 8 caracteres)</span></label>
                         <input type="password" id="password"/>
                     </div>
-                    <legend>
-                        Informações do mentor
-                    </legend>
-                    <div class="input-wrapper">
-                        <label for="name">Identificação</label>
-                        <input type="text" id="name" placeholder="Somente o primeiro nome"/>
-                    </div>
-                    <legend>
-                        Seus horários disponíveis
-                    </legend>
-                    <legend class="subtitle">
-                        Primeira mentoria
-                    </legend>
+        </fieldset>
+        <fieldset>
+            <div class="fieldset-wrapper">
+                <legend>
+                    Informações do mentor
+                </legend>
+                <div class="input-wrapper">
+                    <label for="name">Identificação</label>
+                    <input type="text" id="name" placeholder="Somente o primeiro nome"/>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <div class="fieldset-wrapper">
+                <legend>
+                    Seus horários disponíveis
+                </legend>
+                <legend class="subtitle">
+                    Primeira mentoria
+                </legend>
+                <div class="col-3a">
                     <div class="input-wrapper">
                         <label for="date">Data</label>
                         <input type="date" id="date" placeholder="DD/MM/AAAA"/>
@@ -63,9 +72,11 @@
                         <label for="last-time">Até</label>
                         <input type="time" id="last-time" name="hora_chegada" required>
                     </div>
-                    <legend class="subtitle">
-                        Segunda mentoria
-                    </legend>
+                </div>
+                <legend class="subtitle">
+                    Segunda mentoria
+                </legend>
+                <div class="col-3b">
                     <div class="input-wrapper">
                         <label for="date2">Data</label>
                         <input type="date" id="date2" placeholder="DD/MM/AAAA"/>
@@ -78,9 +89,11 @@
                         <label for="last-time2">Até</label>
                         <input type="time" id="last-time2" name="hora_saida_segunda" required>
                     </div>
-                </fieldset>
             </div>
         </fieldset>
     </form>
+    <footer>
+        <button>SALVAR</button>
+    </footer>                               
 </body>
 </html>
