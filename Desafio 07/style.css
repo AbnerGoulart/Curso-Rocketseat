@@ -15,43 +15,152 @@ body {
     font-optical-sizing: auto;
     font-weight: <weight>;
     font-style: normal;
-    background-color: #fff;
+    color: #121214;
+    max-width: 43.4rem;
+    margin: 0 auto;
 }
 
 main p::first-letter {
-    font-size: 4em; /* Tamanho da letra aumentada */
-    float: left; /* Alinha a letra à esquerda */
-    margin-right: 0.1em; /* Espaçamento entre a letra e o texto */
-    font-weight: bold; /* Opcional: torna a letra em negrito */
-    font-family: Arial, sans-serif; /* Opcional: especifica a família de fontes */
-    color: #333; /* Opcional: especifica a cor da letra */
+    font-size: 4em;
+    float: left;
+    margin-right: 0.1em;
+    font-weight: bold;
+    font-family: "Mulish", sans-serif;
+    color: #121214;
 }
 
 header {
-    background-color: #000; /* Cor de fundo preta */
-    width: 100%; /* Largura de 100% */
-    height: 7.2rem; /* Altura de 72rem */
+    background-color: #000;
+    width: 100%;
+    height: 7.2rem;
     display: flex;
     align-items: center;
 }
 
+header input {
+    height: 3rem;
+    width: auto;
+    font-size: 1.6rem;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    opacity: 90%;
+    outline: none;
+}
+
+input:focus {
+
+}
+
+input::placeholder {
+    font-family: "Mulish", sans-serif;
+    font-size: 1.6rem;
+}
+
 header img {
-    width: 54px; /* Largura da imagem de 40 pixels */
-    height: auto; /* Altura automática para manter a proporção */
-    margin-right: 20px; /* Espaçamento à direita para separar a logo do formulário */
-    margin-left: 20px; /* Espaçamento à esquerda para centralizar a logo */
+    width: 70px;
+    height: auto;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 header form {
-    margin-right: auto; /* Margem à direita para mover o formulário para o final do header */
+    margin-right: auto;
 }
 
-header ul {
-    list-style: none; /* Remover marcadores de lista */
-    display: flex; /* Alinhar os itens do menu em linha */
+#user-info img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border: 0.2rem solid #fff;
+    border-radius: 50%; 
 }
 
-header li {
-    margin-right: 20px; /* Espaçamento entre os itens do menu */
+main img {
+    width: 43.4rem;
+}
+
+main h3 {
+    margin: 1rem 0 1rem 0;
+}
+
+button {
+    display: flex;
+    gap: 1.2rem;
+    outline: none;
+    background: none;
+    font-size: 18px;
     color: white;
+    margin-bottom: 3.4rem;
+}
+
+#like {
+    background-color: #065E7C;
+    border: 1rem solid #065E7C;
+    border-radius: 50%;
+}
+
+#deslike {
+    background-color: #065E7C;
+    border: 1rem solid #065E7C;
+    border-radius: 50%;
+}
+
+#content {
+    padding: 2.2rem;
+    width: 38.2rem;
+    margin-bottom: 3.9rem;
+    text-align: justify;
+}
+
+aside {
+    font-size: 1.4rem;
+    padding: 2.2rem;
+    width: 38.4rem;
+    background: #f2f8fc;
+    border-radius: 8px;
+    margin-bottom: 3.9rem;
+}
+
+h2 {
+    margin-bottom: 3.2rem;
+
+}
+
+menu {
+    display: block;
+}
+
+.link {
+    display: flex;
+    margin-bottom: 3.2rem;
+}
+
+aside a {
+    text-decoration: none;
+    color: #121214;
+    text-align: left;
+    margin-left: 1.6rem;
+}
+
+menu h4 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.link img {
+    width: 151px;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #000;
+    width: 43.4rem;
+    height: 7.2rem; 
+    display: flex;
+    align-items: center;
+}
+
+footer p {
+    color: #fff;
+    margin: auto;
 }
