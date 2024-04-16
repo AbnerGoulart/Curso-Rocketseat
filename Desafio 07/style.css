@@ -31,10 +31,15 @@ main p::first-letter {
 
 header {
     background-color: #000;
-    width: 100%;
+    width: 43.4rem;
     height: 7.2rem;
     display: flex;
     align-items: center;
+}
+
+
+header form {
+    margin-right: auto;
 }
 
 header input {
@@ -47,29 +52,21 @@ header input {
     outline: none;
 }
 
-input:focus {
-
-}
-
 input::placeholder {
     font-family: "Mulish", sans-serif;
     font-size: 1.6rem;
 }
 
 header img {
-    width: 70px;
+    width: 7rem;
     height: auto;
-    margin-right: 20px;
-    margin-left: 20px;
-}
-
-header form {
-    margin-right: auto;
+    margin-right: 2rem;
+    margin-left: 2rem;
 }
 
 #user-info img {
-    width: 48px;
-    height: 48px;
+    width: 4.8rem;
+    height: 4.8rem;
     object-fit: cover;
     border: 0.2rem solid #fff;
     border-radius: 50%; 
@@ -88,7 +85,7 @@ button {
     gap: 1.2rem;
     outline: none;
     background: none;
-    font-size: 18px;
+    font-size: 1.8rem;
     color: white;
     margin-bottom: 3.4rem;
 }
@@ -163,4 +160,53 @@ footer {
 footer p {
     color: #fff;
     margin: auto;
+}
+
+@media (min-width:70em) {
+    body {
+        display: grid;
+        grid-template-areas: 
+        "A A A A"
+        "B B B C"
+        "B B B C"
+        "D D D D";
+        margin: 0 auto;
+        max-width: 100vw;
+        align-items: start;
+        gap: 10rem
+    };
+
+    header {
+        grid-area: A;
+        width: 100%;
+    }
+
+    main {
+        grid-area: B;
+        max-width: 80rem;
+        padding-left: 10rem;
+    }
+
+    aside {
+        grid-area: C;
+    }
+
+    main img {
+        width: 80.3rem;
+        border-radius: 8px;
+    }
+
+    #content {
+        width: 80rem;
+        margin-bottom: 3.9rem;
+        text-align: justify;
+    }
+
+    footer {
+        grid-area: D;
+        width: 100%;
+    }
+
+
+    
 }
