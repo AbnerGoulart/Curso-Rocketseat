@@ -43,7 +43,6 @@ header input {
     font-size: 1.6rem;
     padding: 1rem;
     border-radius: 0.3rem;
-    opacity: 90%;
     outline: none;
 }
 
@@ -178,7 +177,7 @@ footer p {
 
     header {
         grid-area: A;
-        width: 100%;
+        width: auto;
         padding: 0 7rem;
 
     }
@@ -209,13 +208,17 @@ footer p {
         transition: 0.3s;
     }
 
+    .link img:hover {
+        filter: hue-rotate(7deg) contrast(101%) saturate(150%);
+    }
+
     main img {
         width: 80.3rem;
         border-radius: 8px;
     }
 
     #content {
-        width: 80rem;
+        width: 75rem;
         margin-bottom: 3.9rem;
         text-align: justify;
     }
