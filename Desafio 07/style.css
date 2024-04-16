@@ -6,7 +6,7 @@
 }
 
 html {
-    font-size: 10px;
+    font-size: 9px;
 }
 
 body {
@@ -37,14 +37,9 @@ header {
     align-items: center;
 }
 
-
-header form {
-    margin-right: auto;
-}
-
 header input {
     height: 3rem;
-    width: auto;
+    width: 20rem;
     font-size: 1.6rem;
     padding: 1rem;
     border-radius: 0.3rem;
@@ -70,6 +65,11 @@ header img {
     object-fit: cover;
     border: 0.2rem solid #fff;
     border-radius: 50%; 
+    margin: 3.5rem;
+}
+
+main {
+    max-width: 43.4rem;
 }
 
 main img {
@@ -113,7 +113,7 @@ aside {
     font-size: 1.4rem;
     padding: 2.2rem;
     width: 38.4rem;
-    background: #f2f8fc;
+    background: #fff;
     border-radius: 8px;
     margin-bottom: 3.9rem;
 }
@@ -173,12 +173,23 @@ footer p {
         margin: 0 auto;
         max-width: 100vw;
         align-items: start;
-        gap: 10rem
-    };
+        gap: 10rem;
+    }
 
     header {
         grid-area: A;
         width: 100%;
+        padding: 0 7rem;
+
+    }
+
+    header input {
+        height: 3rem;
+        width: 1000px;
+        font-size: 1.6rem;
+        padding: 1rem;
+        border-radius: 0.3rem;
+        outline: none;
     }
 
     main {
@@ -189,6 +200,13 @@ footer p {
 
     aside {
         grid-area: C;
+        border: 1px solid #dedee2;
+        box-shadow:  0 2px 6px 0 rgba(0,4,51,.2);
+    }
+
+    aside:hover {
+        box-shadow: 0 8px 20px rgba(0, 4, 51,.2);
+        transition: 0.3s;
     }
 
     main img {
