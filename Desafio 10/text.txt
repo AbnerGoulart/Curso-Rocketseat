@@ -1,0 +1,4 @@
+Jogo da Adivinhação
+Adivinhe o número entre 0 e 10
+6
+Tentar

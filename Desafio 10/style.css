@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 62.5%;
+}
+
+body {
+  background: linear-gradient(288deg, #C2E9FB 0%, #A1C4FD 100%);
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.hide {
+  display: none;
+}
+
+main {
+  background: #fff;
+  box-shadow: 0px .2rem .4rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.6rem;
+  padding: 4.8rem 6.4rem 6.4rem;
+
+  width: min(42.8rem, 90%);
+  text-align: center;
+  
+}
+
+button {
+  background-color: #7879F1;
+  color: #FFF;
+  text-align: center;
+  font-family: "DM Sans";
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: 0 .4rem .4rem 0;
+  cursor: pointer;
+
+  transition: background .2s;
+}
+
+button:hover {
+  background-color: #5d5dbc;
+
+}
+
+
+/*screenOne*/
+h1 {
+  color: #34355B;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 1.6rem;
+}
+
+p {
+  color: rgba(52, 53, 91, 0.80);
+  text-align: center;
+  font-family: "DM Sans";
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+
+  width: 300px;
+  height: 18.504px;
+  flex-shrink: 0;
+}
+
+form {
+  margin-top: 4.8rem;
+  display: flex;
+  justify-content: center;
+}
+
+input, button {
+  border: none;
+  padding: 1.6rem;
+}
+
+input {
+  background-color: #DCE2E9;
+  color: #34355B;
+  font-family: "DM Sans";
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 5rem;
+  border-radius: .4rem 0 0 .4rem;
+}
+
+/*screenTwo*/
+h2 {
+  color: #34355B;
+  text-align: center;
+  font-family: "DM Sans";
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 36px */
+  margin-bottom: 3.3rem;
+}
+
+.screenTwo button {
+  border-radius: .4rem;
+}
