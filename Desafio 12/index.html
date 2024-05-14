@@ -25,22 +25,34 @@
     </section>
 
     <section id="controls" class="flex">
-      <button><i class="ph-thin ph-play"></i>
+      <button 
+        data-action="toggleRunning"
+        class="ph-thin ph-play">
         <span class="sr-only">Iniciar o contador</span>
       </button>
-      <button><i class="ph-thin ph-pause"></i>
+      <button 
+        data-action="toggleRunning"
+        class="ph-thin ph-pause">
         <span class="sr-only">Pausar o contador</span>
       </button>
-      <button><i class="ph-thin ph-timer secondary"></i>
+      <button 
+        data-action="set"
+        class="ph-thin ph-timer secondary">
         <span class="sr-only">Configurar o contador</span>
       </button>
-      <button><i class="ph-thin ph-stop secondary"></i>
+      <button 
+        data-action="reset"
+        class="ph-thin ph-stop secondary">
         <span class="sr-only">Reiniciar o contador</span>
       </button>
-      <button><i class="ph-thin ph-speaker-high"></i>
+      <button 
+        data-action="toggleMusic"
+        class="ph-thin ph-speaker-high">
         <span class="sr-only">Iniciar música</span>
       </button>
-      <button><i class="ph-thin ph-speaker-slash secondary"></i>
+      <button 
+        data-action="toggleMusic"
+        class="ph-thin ph-speaker-slash secondary">
         <span class="sr-only">Parar música</span>
       </button>
     </section>
