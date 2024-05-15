@@ -4,7 +4,7 @@ import { reset } from './actions.js'
 import { kitchenTimer } from './sounds.js'
 
 export function countdown() {
-
+  
   clearTimeout(state.countdownId)
 
   if(!state.isRunning) {
