@@ -31,12 +31,28 @@ body {
   box-shadow: 0 0 3em rgb(254, 254, 92);
 }
 
-.terra, .lua {
+.mercurio, .venus, .terra, .lua, .marte, .jupiter, .saturno, .urano, .netuno {
   position: absolute;
   border-style: solid;
   border-color: white transparent transparent transparent;
   border-width: .1em .1em 0 0;
   border-radius: 50%;
+}
+
+.mercurio {
+    top: 13em;
+    left: 13em;
+    width: 14em;
+    height: 14em;
+    animation: orbit 8.79s linear infinite;
+}
+
+.venus {
+  top: 10em;
+  left: 10em;
+  width: 20em;
+  height: 20em;
+  animation: orbit 22.4s linear infinite;
 }
 
 .terra {
@@ -48,17 +64,77 @@ body {
 }
 
 .lua {
-  top: 0;
-  right: 0;
-  width: 8em;
-  height: 8em;
+  top: 22px;
+  right: 22px;
+  width: 6em;
+  height: 6em;
   animation: orbit 2.7s linear infinite;
 }
 
-.terra::before, .lua::before {
+.marte {
+  top: -2em;
+  left: -2em;
+  width: 45em;
+  height: 45em;
+  animation: orbit 68.7s linear infinite;
+}
+
+.jupiter {
+  top: -9em; /* Posição ajustada */
+  left: -9em; /* Posição ajustada */
+  width: 60em; /* Tamanho ajustado */
+  height: 60em; /* Tamanho ajustado */
+  animation: orbit 433.3s linear infinite;
+}
+
+.saturno {
+  top: -19em;
+  left: -19em;
+  width: 80em;
+  height: 80em;
+  animation: orbit 10755s linear infinite;
+}
+
+.urano {
+  top: -29em;
+  left: -29em;
+  width: 100em;
+  height: 100em;
+  animation: orbit 30768s linear infinite;
+}
+
+.netuno {
+  top: -39em;
+  left: -39em;
+  width: 120em;
+  height: 120em;
+  animation: orbit 60316s linear infinite;
+}
+
+.mercurio::before, .venus::before, 
+.terra::before, .lua::before, 
+.marte::before, .jupiter::before, 
+.saturno::before, .urano::before, 
+.netuno::before {
   content: '';
   position: absolute;
   border-radius: 50%;
+}
+
+.mercurio::before {
+  top: 1em;
+  right: 1.5em;
+  width: 1.5em;
+  height: 1.5em;
+  background-color: rgb(255, 0, 0);
+}
+
+.venus::before {
+  top: 2em;
+  right: .7em;
+  width: 3em;
+  height: 3em;
+  background-color: rgb(173, 127, 0);
 }
 
 .terra::before {
@@ -70,11 +146,51 @@ body {
 }
 
 .lua::before {
-  top: .8em;
-  right: .2em;
+  top: .3em;
+  right: .3em;
   width: 1.2em;
   height: 1.2em;
   background-color: silver;
+}
+
+.marte::before {
+  top: 5.6em;
+  right: 5em;
+  width: 2.5em;
+  height: 2.5em;
+  background-color: rgb(89, 9, 9);
+}
+
+.jupiter::before {
+  top: 5em;
+  right: 4em;
+  width: 8em;
+  height: 8em;
+  background-color: rgb(255, 200, 100);
+}
+
+.saturno::before {
+  top: 9em;
+  right: 8em;
+  width: 6em;
+  height: 6em;
+  background-color: rgb(59, 42, 10);
+}
+
+.urano::before {
+  top: 13em;
+  right: 12em;
+  width: 4.5em;
+  height: 4.5em;
+  background-color: rgb(139, 118, 222);
+}
+
+.netuno::before {
+  top: 15em;
+  right: 15em;
+  width: 5em;
+  height: 5em;
+  background-color: rgb(33, 33, 74);
 }
 
 @keyframes orbit {
