@@ -31,7 +31,11 @@ body {
   box-shadow: 0 0 3em rgb(254, 254, 92);
 }
 
-.mercurio, .venus, .terra, .lua, .marte, .jupiter, .saturno, .urano, .netuno {
+.mercurio, .venus, 
+.terra, .lua, 
+.marte, .jupiter,  
+.saturno, .urano, 
+.netuno {
   position: absolute;
   border-style: solid;
   border-color: white transparent transparent transparent;
@@ -40,11 +44,11 @@ body {
 }
 
 .mercurio {
-    top: 13em;
-    left: 13em;
-    width: 14em;
-    height: 14em;
-    animation: orbit 8.79s linear infinite;
+  top: 13em;
+  left: 13em;
+  width: 14em;
+  height: 14em;
+  animation: orbit 8.79s linear infinite;
 }
 
 .venus {
@@ -76,15 +80,15 @@ body {
   left: -2em;
   width: 45em;
   height: 45em;
-  animation: orbit 68.7s linear infinite;
+  animation: orbit 42.7s linear infinite;
 }
 
 .jupiter {
-  top: -9em; /* Posição ajustada */
-  left: -9em; /* Posição ajustada */
-  width: 60em; /* Tamanho ajustado */
-  height: 60em; /* Tamanho ajustado */
-  animation: orbit 433.3s linear infinite;
+  top: -9em;
+  left: -9em;
+  width: 60em;
+  height: 60em;
+  animation: orbit 46.33s linear infinite;
 }
 
 .saturno {
@@ -92,7 +96,21 @@ body {
   left: -19em;
   width: 80em;
   height: 80em;
-  animation: orbit 10755s linear infinite;
+  animation: orbit 57.55s linear infinite;
+}
+
+.anel {
+  top: 8em;
+  right: 7em;
+  width: 8em;
+  height: 8em;
+  animation: orbit 10ms linear infinite;
+  position: absolute;
+  border-style: solid;
+  border-color: rgb(7, 181, 187) transparent transparent transparent;
+  border-width: 0 0 0 0;
+  border-radius: 50%;
+  box-shadow: 0 0 1.5em rgb(183, 12, 123);
 }
 
 .urano {
@@ -100,7 +118,7 @@ body {
   left: -29em;
   width: 100em;
   height: 100em;
-  animation: orbit 30768s linear infinite;
+  animation: orbit 67.68s linear infinite;
 }
 
 .netuno {
@@ -108,14 +126,14 @@ body {
   left: -39em;
   width: 120em;
   height: 120em;
-  animation: orbit 60316s linear infinite;
+  animation: orbit 73.16s linear infinite;
 }
 
 .mercurio::before, .venus::before, 
 .terra::before, .lua::before, 
-.marte::before, .jupiter::before, 
-.saturno::before, .urano::before, 
-.netuno::before {
+.marte::before, .jupiter::before,
+.saturno::before, .anel::before, 
+.urano::before, .netuno::before {
   content: '';
   position: absolute;
   border-radius: 50%;
@@ -174,7 +192,7 @@ body {
   right: 8em;
   width: 6em;
   height: 6em;
-  background-color: rgb(59, 42, 10);
+  background-color: rgb(80, 18, 156);
 }
 
 .urano::before {
