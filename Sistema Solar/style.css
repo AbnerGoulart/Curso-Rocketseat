@@ -20,7 +20,7 @@ body {
   position: relative;
 }
 
-.sol {
+#sol {
   position: absolute;
   top: 15em;
   left: 15em;
@@ -31,10 +31,10 @@ body {
   box-shadow: 0 0 3em rgb(254, 254, 92);
 }
 
-.mercurio, .venus, 
-.terra, .lua, 
-.marte, .jupiter,  
-.saturno, .urano, 
+#mercurio, .venus,
+.terra, .lua,
+.marte, .jupiter,
+.saturno, .urano,
 .netuno {
   position: absolute;
   border-style: solid;
@@ -43,12 +43,11 @@ body {
   border-radius: 50%;
 }
 
-.mercurio {
+#mercurio {
   top: 13em;
   left: 13em;
   width: 14em;
   height: 14em;
-  animation: orbit 8.79s linear infinite;
 }
 
 .venus {
@@ -129,17 +128,17 @@ body {
   animation: orbit 73.16s linear infinite;
 }
 
-.mercurio::before, .venus::before, 
-.terra::before, .lua::before, 
+#mercurio::before, .venus::before,
+.terra::before, .lua::before,
 .marte::before, .jupiter::before,
-.saturno::before, .anel::before, 
+.saturno::before, .anel::before,
 .urano::before, .netuno::before {
   content: '';
   position: absolute;
   border-radius: 50%;
 }
 
-.mercurio::before {
+#mercurio::before {
   top: 1em;
   right: 1.5em;
   width: 1.5em;
