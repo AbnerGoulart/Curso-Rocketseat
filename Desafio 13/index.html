@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Timer 2.0</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script type="module" src="./src/main.js" defer></script>
+</head>
+<body>
+  <div class="video-container">
+    <video autoplay muted loop id="background-video">
+        <source src="./assets/20767022-uhd_3840_2160_24fps.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="main-content">
+    <section class="container">
+      <section id="timer">
+        <span id="minutes">00</span>
+        <span>:</span>
+        <span id="seconds">00</span>
+      </section>
+
+      <section id="controls">
+        <button 
+        data-action="toggleRunning"
+        class="ph ph-play-circle">
+        <span class="sr-only"></span>
+        </button>
+        <button 
+        data-action="reset"
+        class="ph ph-stop-circle">
+        <span class="sr-only"></span>
+        </button>
+        <button 
+        data-action="toggleRunning"
+        class="ph ph-plus-circle">
+        <span class="sr-only"></span>
+        </button>
+        <button 
+        data-action="set"
+        class="ph ph-minus-circle">
+        <span class="sr-only"></span>
+        </button>
+      </section>
+    </section>
+    
+    <aside class="menu">
+      <section id="music">
+        <button 
+        data-action="toggleRunning"
+        class="ph ph-fire">
+        <span class="sr-only"></span>
+        </button>
+        <button 
+        data-action="toggleRunning"
+        class="ph ph-cloud-rain">
+        <span class="sr-only"></span>
+        </button>
+        <button 
+        data-action="toggleRunning"
+        class="ph ph-tree">
+        <span class="sr-only"></span>
+        </button>
+        <button 
+        data-action="toggleRunning"
+        class="ph ph-coffee">
+        <span class="sr-only"></span>
+        </button>
+      </section>
+    </aside>
+  </div>
+</body>
+</html>
