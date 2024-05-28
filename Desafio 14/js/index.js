@@ -1,4 +1,4 @@
-import { Router } from "./router"
+import { Router } from "./router.js"
 
 const router = new Router()
 router.add("/", "/pages/home.html")
