@@ -10,3 +10,23 @@ router.handle()
 
 window.onpopstate = () => router.handle()
 window.route = () => router.route()
+
+// Adicionando evento ao botão "QUERO SABER MAIS"
+function addExploreButtonEvent() {
+  const exploreButton = document.getElementById('btn')
+  if (exploreButton) {
+    exploreButton.onclick = (event) => {
+      event.preventDefault()
+      window.history.pushState({}, "", "/explore")
+      router.handle()
+    }
+  }
+}
+
+// Modificar o método handle para garantir que o evento seja adicionado após carregar a página
+const originalHandle = router.handle.bind(router)
+router.handle = () => {
+  originalHandle()
+  // Aguardando a renderização do conteúdo antes de adicionar o evento ao botão
+  setTimeout(addExploreButtonEvent, 50)
+}

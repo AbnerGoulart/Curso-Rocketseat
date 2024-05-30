@@ -12,6 +12,11 @@ html, body {
   color: #E1E1E6;
 }
 
+/* img {
+  width: 100vw;
+  height: 100vh;
+} */
+
 .menu {
   display: flex;
   gap: 3.2rem;
@@ -23,10 +28,24 @@ html, body {
   color: #E1E1E6;
 }
 
+.menu:hover {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.749), rgba(255, 255, 255, 0));
+  transition: 100ms;
+}
+
 a {
   font-size: 1.6rem;
   text-decoration: none;
   color: #E1E1E6;
+}
+
+a:hover {
+  font-size: 1.65rem;
+  transition: 5ms;
+}
+
+.menu a.active {
+  font-weight: bold;
 }
 
 .init {
@@ -43,10 +62,24 @@ h1 {
 }
 
 button {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  box-shadow: 0 8px 32px 0 rgba(69, 69, 69, 0.37);
+  cursor: pointer;
+
+  color: white;
+  font-weight: bold;
+  
   gap: .6rem;
   padding: 1.2rem 3.2rem;
   border-radius: .5rem;
-  border: 2px solid #FFF;
+  border: none;
+}
+
+button:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.338), rgba(255, 255, 255, 0.174));
+  color: #006658;
+  box-shadow: 0 8px 32px 0 rgba(121, 121, 121, 0.37);
+  transition: 5ms;
 }
 
 .content {
