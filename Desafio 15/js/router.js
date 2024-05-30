@@ -3,7 +3,6 @@ export class Router {
 
   add(routeName, page) {
     this.routes[routeName] = page
-    console.log(this.routes)
   }
 
   route(event) {
@@ -22,6 +21,7 @@ export class Router {
       .then(html => {
         document.querySelector('#app').innerHTML = html
         this.updateActiveLink(pathname)
+        this.updateBackground(pathname)
       })
   }
 
@@ -33,5 +33,24 @@ export class Router {
         link.classList.add('active')
       }
     })
+  }
+
+  updateBackground(pathname) {
+    const body = document.body
+    body.className = '' // Remove todas as classes
+    switch (pathname) {
+      case '/':
+        body.classList.add('home-page')
+        break
+      case '/universe':
+        body.classList.add('universe-page')
+        break
+      case '/explore':
+        body.classList.add('explore-page')
+        break
+      default:
+        body.classList.add('default-page')
+        break
+    }
   }
 }

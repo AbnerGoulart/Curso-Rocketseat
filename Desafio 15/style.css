@@ -10,12 +10,24 @@ html, body {
   font-size: 62.5%;
   background-color: rgb(45, 90, 141);
   color: #E1E1E6;
+
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-/* img {
-  width: 100vw;
-  height: 100vh;
-} */
+.home-page {
+  background-image: url('./assets/mountains-universe-1.png');
+}
+
+.universe-page {
+  background-image: url('./assets/mountains-universe02.png');
+}
+
+.explore-page {
+  background-image: url('./assets/mountains-universe-3.png');
+}
 
 .menu {
   display: flex;
