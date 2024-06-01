@@ -6,88 +6,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GitFav</title>
+  <script type="module" src="js/main.js" defer></script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-svg">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
+
   <div id="app">
+
     <header>
       <img src="assets/logo.svg" alt="logo">
       <div class="search">
         <label class="sr-only" for="input-search">Usuário do Github</label>
         <input id="input-search" type="text" placeholder="Digite o Github username que quer favoritar">
-        <button>FAVORITAR</button>
+        <button>
+          <i class="ph-bold ph-star"></i>
+          FAVORITAR
+        </button>
       </div>
     </header>
+
     <table>
+
       <thead>
         <tr>
           <th>User</th>
-          <th>Repositorie</th>
+          <th>Repositories</th>
           <th>Followers</th>
           <th>Action</th>
         </tr>
       </thead>
+      
       <tbody>
-        <tr>
-          <td class="user">
-            <img src="https://github.com/AbnerGoulart.png" alt="imagem de Abner">
-            <a href="https://github.com/AbnerGoulart" target="_blank">
-              <p>Abner Goulart</p>
-              <span>AbnerGoulart</span>
-            </a>
-          </td>
-          <td class="repositories">
-            76
-          </td>
-          <td class="followers">
-            1234
-          </td>
-          <td>
-            <button class="remove">Remover</button>
-          </td>
-        </tr>
-
-        <tr>
-          <td class="user">
-            <img src="https://github.com/alissongoulart.png" alt="imagem de Alisson">
-            <a href="https://github.com/alissongoulart" target="_blank">
-              <p>Alisson Goulart</p>
-              <span>alissongoulart</span>
-            </a>
-          </td>
-          <td class="repositories">
-            76
-          </td>
-          <td class="followers">
-            1234
-          </td>
-          <td>
-            <button class="remove">Remover</button>
-          </td>
-        </tr>
-
-        <tr>
-          <td class="user">
-            <img src="https://github.com/ricardorwo.png" alt="imagem de Ricardo">
-            <a href="https://github.com/ricardorwo" target="_blank">
-              <p>Ricardo da Betinha</p>
-              <span>ricardorwo</span>
-            </a>
-          </td>
-          <td class="repositories">
-            76
-          </td>
-          <td class="followers">
-            1234
-          </td>
-          <td>
-            <button class="remove">Remover</button>
-          </td>
-        </tr>
-
       </tbody>
+      
     </table>
+
   </div>
+
 </body>
 </html>
