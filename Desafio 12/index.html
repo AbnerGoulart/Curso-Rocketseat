@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br" class="">
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-svg">
@@ -9,6 +11,7 @@
   <link rel="stylesheet" href="./style.css">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <script type="module" src="./src/main.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
   <div id="app">
@@ -22,6 +25,18 @@
       <span id="minutes">00</span>
       <span>:</span>
       <span id="seconds">00</span>
+    </section>
+
+    <section id="location">
+      <p>Tempo agora em</p>
+      <span id="city">Itajubá</span>
+      <span>,</span>
+      <span id="country">Brasil</span>
+    </section>
+
+    <section id="weather">
+      <span id="temperature">21ºc</span>
+      <span id="sky"><i class="ph ph-cloud-sun"></i></span>
     </section>
 
     <section id="controls" class="flex">
@@ -56,6 +71,10 @@
         <span class="sr-only">Parar música</span>
       </button>
     </section>
+  </div>
+
+  <div id="notifications">
+
   </div>
 </body>
 </html>
