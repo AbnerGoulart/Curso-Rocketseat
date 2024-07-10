@@ -1,9 +1,9 @@
 
-exports.up = knex => knex.schema.createTable("notes", table => {
+exports.up = knex => knex.schema.createTable("movie_notes", table => {
   table.increments("id");
   table.text("title");
   table.text("description");
-
+  
   table.integer("rating");
   table.integer("user_id").references("id").inTable("users");
 
