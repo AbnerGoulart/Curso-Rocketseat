@@ -21,14 +21,16 @@ function App() {
 
   }
 
-  async function showInput(event) {
-    console.log(event)
+  async function searchIfEnter(event) {
+    if (event.key == 'Enter') {
+      await searchCity()
+    }
   }
 
   return (
     <div>
       <h1>Previsão do Tempo</h1>
-      <input ref={inputRef} type="text" placeholder='Cidade' onChange={e => showInput(e)} />
+      <input ref={inputRef} type="text" placeholder='Cidade' onKeyUp={e => searchIfEnter(e)} />
       <button onClick={searchCity}>Buscar</button>
       {weather && <WeatherInfo weather={weather}/>}
       <CookiesCard/>
