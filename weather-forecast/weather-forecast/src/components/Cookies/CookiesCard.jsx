@@ -18,7 +18,13 @@ function CookiesCard() {
 
     // Limpeza do timer
     return () => clearTimeout(timer);
-  }, [] /* este array contem as variaveis de estado que devem ser escutadas e que dispararão esta função quando seu valor for alterado */);
+  }, 
+  /* 
+    Este array contem as variaveis de estado que devem
+    ser escutadas e que dispararão esta função quando 
+    seu valor for alterado 
+  */
+  []);
 
   async function acceptCookies() {
     cookies.set(cookieName, true)
