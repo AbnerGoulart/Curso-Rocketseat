@@ -2,7 +2,7 @@ import { useState, useRef } from 'react'
 import axios from 'axios'
 import './App.css'
 import WeatherInfo from './components/WeatherInfo/WeatherInfo'
-import Cookies from './components/Cookies/Cookies'
+import CookiesCard from './components/Cookies/CookiesCard'
 
 function App() {
   const [weather, setWeather] = useState()
@@ -31,7 +31,7 @@ function App() {
       <input ref={inputRef} type="text" placeholder='Cidade' onChange={e => showInput(e)} />
       <button onClick={searchCity}>Buscar</button>
       {weather && <WeatherInfo weather={weather}/>}
-      <Cookies/>
+      <CookiesCard/>
     </div>
   )
 }
