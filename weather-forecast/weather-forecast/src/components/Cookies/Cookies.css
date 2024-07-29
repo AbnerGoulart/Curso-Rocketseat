@@ -1,0 +1,19 @@
+.cookies-card {
+  border: 1px solid #d9e1ec;
+  padding: 2.5rem;
+  width: 25rem;
+}
+
+.card-options {
+  display: flex;
+  margin-top: 1rem;
+  justify-content: space-between;
+}
+
+.white-btn {
+  background-color: azure;
+}
+
+.orange-btn {
+  background-color: orangered;
+}
