@@ -1,14 +1,32 @@
-* {
-  margin: 0;
-  padding: 0;
+.App {
+  width: 30rem;
+  height: max-content;
+  min-height: 30rem;
+  background-color: #f7f7f7;
+  border-radius: 3rem;
+  box-shadow: 0 30px 50px #5553;
+  padding: 3rem;
   box-sizing: border-box;
-  text-decoration: none;
 }
 
-body {
-  font-size: 62.5%;
+.form {
+  border: 1px solid #5553;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 3rem;
 }
 
-button, a {
-  cursor: pointer;
+.form input, .form button {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  padding: 1rem;
+}
+
+.form button {
+  opacity: 0.7;
+}
+
+.flag {
+  max-width: 3rem;
 }
