@@ -8,6 +8,7 @@ function WeatherInfo({ city }) {
   const [weather, setWeather] = useState(null);
   const [countryCode, setCountryCode] = useState('');
   const [rainProbability, setRainProbability] = useState(null);
+  const [cityName, setCityName] = useState('');
 
   useEffect(() => {
     async function fetchWeather() {
@@ -25,6 +26,7 @@ function WeatherInfo({ city }) {
 
         setWeather(firstForecast);
         setCountryCode(apiInfo.data.city.country);
+        setCityName(apiInfo.data.city.name);
         setRainProbability(probability);
       } catch (error) {
         console.error("Erro ao buscar dados do tempo:", error);
@@ -43,7 +45,7 @@ function WeatherInfo({ city }) {
   return (
     <div className="weather-container">
       <div className="city">
-        <h2 className="title">{weather.name}</h2>
+        <h2 className="title">{cityName}</h2>
         <img className='flag' src={`https://flagsapi.com/${countryCode}/shiny/64.png`} alt="Bandeira do país" />
       </div>
       <div className="temperature">
