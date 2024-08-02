@@ -2,27 +2,30 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import "./WeatherInfo.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTemperatureThreeQuarters } from '@fortawesome/free-solid-svg-icons';
-import { faWind } from '@fortawesome/free-solid-svg-icons';
-import { faDroplet } from '@fortawesome/free-solid-svg-icons';
-import { faUmbrella } from '@fortawesome/free-solid-svg-icons'
-
-
+import { faTemperatureThreeQuarters, faWind, faDroplet, faUmbrella } from '@fortawesome/free-solid-svg-icons';
 
 function WeatherInfo({ city }) {
   const [weather, setWeather] = useState(null);
   const [countryCode, setCountryCode] = useState('');
+  const [rainProbability, setRainProbability] = useState(null);
 
   useEffect(() => {
     async function fetchWeather() {
       if (!city) return;
       const key = '083ec2fd8333b598e2c4bff31acf4bd8';
-      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&lang=pt_br&units=metric`;
+      const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${key}&lang=pt_br&units=metric`;
 
       try {
         const apiInfo = await axios.get(url);
-        setWeather(apiInfo.data);
-        setCountryCode(apiInfo.data.sys.country);
+        console.log('Forecast Data:', apiInfo.data); // Imprime os dados da API de previsão no console
+
+        // Supondo que você quer a probabilidade de chuva na primeira previsão
+        const firstForecast = apiInfo.data.list[0];
+        const probability = firstForecast.pop * 100; // probabilidade de precipitação em porcentagem
+
+        setWeather(firstForecast);
+        setCountryCode(apiInfo.data.city.country);
+        setRainProbability(probability);
       } catch (error) {
         console.error("Erro ao buscar dados do tempo:", error);
       }
@@ -48,23 +51,19 @@ function WeatherInfo({ city }) {
           {Math.round(weather.main.temp)}°C
         </p>
       </div>
-
       <p className="description">{weather.weather[0].description}</p>
-     
       <ul className="details">
         <li>Chuva:
           <FontAwesomeIcon icon={faUmbrella} className='icon'/>
-          {Math.round(weather.main.feels_like)}°C
+          {rainProbability}%
         </li>
-
         <li>Umidade:
           <FontAwesomeIcon icon={faDroplet} className='icon'/>
           {weather.main.humidity}%
         </li>
-
-        <li>Ventos: 
+        <li>Ventos:
           <FontAwesomeIcon icon={faWind} className='icon'/>
-          {weather.main.pressure} hPa
+          {weather.wind.speed} Km/h
         </li>
       </ul>
     </div>
