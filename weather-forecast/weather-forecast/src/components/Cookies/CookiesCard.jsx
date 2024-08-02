@@ -14,7 +14,7 @@ function CookiesCard() {
       if (cookiesAcceptance != true) {
         setCookiesVisible(true);
       } 
-    }, 1000); // Executa após 1 segundo
+    }, 1000);
 
     // Limpeza do timer
     return () => clearTimeout(timer);
