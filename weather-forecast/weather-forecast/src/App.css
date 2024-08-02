@@ -1,6 +1,6 @@
 .App {
   width: 30rem;
-  height: max-content;
+  max-height: 60rem;
   min-height: 30rem;
   background-color: #f7f7f7;
   border-radius: 3rem;

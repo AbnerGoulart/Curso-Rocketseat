@@ -38,6 +38,8 @@ function WeatherInfo({ city }) {
     return <div>Dados do tempo não disponíveis.</div>;
   }
 
+  const windSpeedKmh = (weather.wind.speed * 3.6).toFixed(2);
+
   return (
     <div className="weather-container">
       <div className="city">
@@ -63,7 +65,7 @@ function WeatherInfo({ city }) {
         </li>
         <li>Ventos:
           <FontAwesomeIcon icon={faWind} className='icon'/>
-          {weather.wind.speed} Km/h
+          {windSpeedKmh} Km/h
         </li>
       </ul>
     </div>
