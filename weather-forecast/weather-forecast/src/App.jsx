@@ -1,41 +1,37 @@
-import { useState, useRef } from 'react'
-import axios from 'axios'
-import './App.css'
-import WeatherInfo from './components/WeatherInfo/WeatherInfo'
-import CookiesCard from './components/Cookies/CookiesCard'
+import { useState, useRef } from 'react';
+import './App.css';
+import WeatherInfo from './components/WeatherInfo/WeatherInfo';
+import CookiesCard from './components/Cookies/CookiesCard';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
-  const [weather, setWeather] = useState()
-  const inputRef = useRef()
+  const [city, setCity] = useState('');
+  const inputRef = useRef();
 
-  async function searchCity () {
-    const city = inputRef.current.value
-    const key = '083ec2fd8333b598e2c4bff31acf4bd8'
-
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&lang=pt_br&units=metric`
-
-    const apiInfo = await axios.get(url)
-    setWeather(apiInfo.data)
-
-    console.log(apiInfo)
-
+  function handleSearch() {
+    setCity(inputRef.current.value);
   }
 
-  async function searchIfEnter(event) {
-    if (event.key == 'Enter') {
-      await searchCity()
+  function handleKeyPress(event) {
+    if (event.key === 'Enter') {
+      handleSearch();
     }
   }
 
   return (
-    <div>
+    <div className='App'>
       <h1>Previsão do Tempo</h1>
-      <input ref={inputRef} type="text" placeholder='Cidade' onKeyUp={e => searchIfEnter(e)} />
-      <button onClick={searchCity}>Buscar</button>
-      {weather && <WeatherInfo weather={weather}/>}
+      <div className="form">
+        <input ref={inputRef} type="text" placeholder='Cidade' onKeyUp={handleKeyPress} />
+        <button onClick={handleSearch}>
+          <FontAwesomeIcon icon={faMagnifyingGlass} />
+        </button>
+      </div>
+      <WeatherInfo city={city} />
       <CookiesCard/>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

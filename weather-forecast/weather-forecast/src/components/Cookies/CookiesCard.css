@@ -1,34 +1,65 @@
 .cookies-card {
   border: 1px solid #d9e1ec;
-  padding: 2.5rem;
-  width: 25rem;
+  padding: 2rem;
+  width: 300px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.cookies-message {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.cookies-message a {
+  color: #f78a55;
+  text-decoration: none;
+}
+
+.cookies-message a:hover {
+  text-decoration: underline;
 }
 
 .card-options {
   display: flex;
-  margin-top: 1rem;
   justify-content: space-between;
+  width: 100%;
 }
 
-.white-btn {
-  background-color: azure;
+.reject-btn,
+.accept-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  flex: 1;
+  margin: 0 0.5rem;
 }
 
-.orange-btn {
-  background-color: orangered;
+.reject-btn {
+  background-color: #b56291;
+  color: #fff;
 }
 
-.fade-out{
-  display: none;
-  opacity:0;
-  width:0;
-  height:0;
-  transition: width 0.5s 0.5s, height 0.5s 0.5s, opacity 0.5s;
+.accept-btn {
+  background-color: #f78a55;
+  color: #fff;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s;
 }
 
 .fade-in {
-  opacity:1;
-  width:100px;
-  height:100px;
-  transition: width 0.5s, height 0.5s, opacity 0.5s 0.5s;
+  opacity: 1;
+  transition: opacity 0.5s;
 }
