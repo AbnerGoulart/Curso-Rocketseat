@@ -5,7 +5,6 @@ import { api } from "../../services/api"
 import avatarPlaceholder from "../../assets/PlaceholderAvatar.png"
 
 
-
 export function Header(){
   const { signOut, user } = useAuth()
 

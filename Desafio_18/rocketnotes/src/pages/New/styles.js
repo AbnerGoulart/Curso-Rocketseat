@@ -5,7 +5,7 @@ export const Container = styled.div`
   height: 100vh;
 
   display: grid;
-  grid-template-rows: 10.5rem auto;
+  grid-template-rows: 105px auto;
   grid-template-areas: 
   "header"
   "content";
@@ -23,8 +23,8 @@ export const Container = styled.div`
 `;
 
 export const Form = styled.form`
-  max-width: 55rem;
-  margin: 3.8rem auto;
+  max-width: 550px;
+  margin: 38px auto;
 
   > header {
     display: flex;
