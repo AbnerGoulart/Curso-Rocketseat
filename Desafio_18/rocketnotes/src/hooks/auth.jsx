@@ -29,14 +29,14 @@ function AuthProvider({ children }) {
     localStorage.removeItem("@rocketnotes:token");
     localStorage.removeItem("@rocketnotes:user");
 
-    setData({})
+    setData({});
   }
 
   async function updateProfile({ user, avatarFile }){
     try{
 
       if(avatarFile){
-        const fileUploadForm = new FormaData();
+        const fileUploadForm = new FormData();
         fileUploadForm.append("avatar", avatarFile)
 
         const response = await api.patch("/users/avatar", fileUploadForm)
